@@ -1,18 +1,19 @@
 {
   "name": "node-js-and-jwt-token-authentication",
   "version": "1.0.0",
-  "description": "",
+  "description": "use jwt and node js for user authentication in the node js project",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "repository": {
-    "type": "git",
-    "url": "git remote add origin https://github.com/alihassanft/Node-JS-and-JWT-Token-Authentication.git"
-  },
   "keywords": [
-    "Node-js-Authentication"
+    "NodeJs-Authentication"
   ],
-  "author": "Ali-Hassan",
-  "license": "ISC"
+  "author": "Ali Hassan",
+  "license": "ISC",
+  "dependencies": {
+    "bcrypt": "^5.1.1",
+    "express": "^4.18.2",
+    "jsonwebtoken": "^9.0.2"
+  }
 }
