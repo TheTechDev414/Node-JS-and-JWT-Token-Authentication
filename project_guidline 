@@ -1,0 +1,60 @@
+Certainly! Here's a concise section you can add to your README file to guide users on how to interact with the provided endpoints:
+
+---
+
+## API Usage
+
+### 1. User Registration
+
+- **URL:** `http://localhost:3000/user/register`
+- **Method:** `POST`
+- **Body Example:**
+  ```json
+  {
+      "firstName": "john",
+      "lastName": "doe",
+      "userName": "johnedoe",
+      "password": "password"
+  }
+  ```
+### 2. User Login
+
+- **URL:** `http://localhost:3000/user/login`
+- **Method:** `POST`
+- **Body Example:**
+  ```json
+  {
+      "userName": "johnedoe",
+      "password": "password"
+  }
+  ```
+
+- **Response Example:**
+  ```json
+  {
+      "message": "Login Successful",
+      "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiJjbG94YWo3bTQwMDAwOXBtMzgzdGxzeDJmIiwiaWF0IjoxNjk5OTA1NDM1LCJleHAiOjE3MDA1MTAyMzV9.Ig7ShCqmWtmTNBnA--yz8ZK6dNGZy-qVr_jKXiHwYTI"
+  }
+  ```
+
+Upon a successful login, the API will respond with a message confirming the successful login and provide a JWT token. This token should be included in the Authorization header for authenticated requests to endpoints that require authentication, such as "Fetch User by ID" and "Fetch All Users."
+
+### 3. Fetch User by ID
+
+- **URL:** `http://localhost:3000/user/fetchById`
+- **Method:** `GET`
+- **Authorization:** Include the token in the Authorization header as `Bearer your token`.
+  - This API extracts the user ID from the token.
+
+### 4. Fetch All Users
+
+- **URL:** `http://localhost:3000/user/fetchAll`
+- **Method:** `GET`
+- **Authorization:** Include the token in the Authorization header as `Bearer your token`.
+  - This endpoint retrieves all users' data.
+
+---
+
+Feel free to customize the instructions based on any additional details or specifics relevant to your project.
+Feel free to reach out if you have any questions or need further assistance.
+email alihassanftt@gmail.com

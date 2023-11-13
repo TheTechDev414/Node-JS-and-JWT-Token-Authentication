@@ -1,0 +1,46 @@
+
+## Project Setup
+
+### .env File
+# if your pro just copy past these two lines
+DATABASE_URL="mysql://root:password@localhost:3306/new_schema"
+JWT_SECRET=3X9zR6Pj$@M2pY7c
+
+
+
+
+This project uses a `.env` file to manage environment variables. To set up your own configuration, follow these steps:
+
+1. **Create a Copy:**
+   Duplicate the `.env.example` file and rename it to `.env`. This will be your local configuration file.
+
+2. **Postgres Configuration (Optional):**
+   If youre using PostgreSQL, uncomment and configure the `DATABASE_URL` line accordingly.
+   # postgres-exp
+   # DATABASE_URL="postgresql://johndoe:randompassword@localhost:5432/dbName?schema=public"
+
+3. **MySQL Configuration:**
+   If your project uses MySQL, uncomment and set the `DATABASE_URL` line.
+
+   # mysql
+   DATABASE_URL="mysql://root:password@localhost:3306/dbName"
+
+   Update the connection details such as `root`, `password`, `localhost`, `3306`, and `dbName` according to your MySQL setup.
+
+4. **JWT Secret Key:**
+   Replace the placeholder string in `JWT_SECRET` with a strong, secure secret key for JWT token generation.
+
+   ```ini
+   # use any strong string for jwt secret key
+   JWT_SECRET="somestring"
+   ```
+
+6. **Usage:**
+   - Once your `.env` file is set up, your project should automatically read these environment variables during runtime.
+
+
+
+
+
+Feel free to reach out if you have any questions or need further assistance.
+email alihassanftt@gmail.com
